@@ -18,3 +18,8 @@ SERVER_CATEGORIES=P2P
 # Heath check duration
 HEALTH_VPN_DURATION_INITIAL=120s
 ```
+
+## Run this command to test gluetun health
+```
+docker run --rm --network=container:gluetun alpine:3.18 sh -c "apk add wget && wget -qO- https://ipinfo.io"
+```
