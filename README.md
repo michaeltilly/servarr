@@ -23,3 +23,8 @@ HEALTH_VPN_DURATION_INITIAL=120s
 ```
 docker run --rm --network=container:gluetun alpine:3.18 sh -c "apk add wget && wget -qO- https://ipinfo.io"
 ```
+## To test gluetun connectivity from another container
+```
+docker exec -it container_name bash
+wget -qO- https://ipinfo.io
+```
